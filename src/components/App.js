@@ -15,16 +15,25 @@ function App() {
   const appClass = isDarkMode ? 'App dark' : 'App light';
 
   return (
-    <div className={appClass}>
-      <header>
-        <h2>Shopster</h2>
-        <button onClick={toggleDarkMode}>
-          {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        </button>
-
-      </header>
-      <ShoppingList items={itemData} />
-    </div>
+    <>
+      {isDarkMode ? (
+        <div className="App dark">
+          <header>
+            <h2>Shopster</h2>
+            <button onClick={toggleDarkMode}>Switch to Light Mode</button>
+          </header>
+          <ShoppingList items={itemData} />
+        </div>
+      ) : (
+        <div className="App light">
+          <header>
+            <h2>Shopster</h2>
+            <button onClick={toggleDarkMode}>Switch to Dark Mode</button>
+          </header>
+          <ShoppingList items={itemData} />
+        </div>
+      )}
+    </>
   );
 }
 
