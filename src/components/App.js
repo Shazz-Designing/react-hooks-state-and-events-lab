@@ -21,6 +21,7 @@ function App() {
         <button onClick={toggleDarkMode}>
           {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
         </button>
+
       </header>
       <ShoppingList items={itemData} />
     </div>
